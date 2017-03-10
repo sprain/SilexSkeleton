@@ -1,0 +1,6 @@
+/vendor
+/app/cache/*
+!/app/cache/.gitkeep
+/app/logs/*
+!/app/logs/.gitkeep
+.DS_Store

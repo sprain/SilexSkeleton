@@ -1,0 +1,20 @@
+{
+    "name": "ticketpark/gonzales",
+    "description": "A high-performance ticket booking application",
+    "type": "project",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0",
+        "silex/silex": "^2.0",
+        "symfony/security": "^3.2",
+        "doctrine/cache": "^1.6",
+        "twig/twig": "^1.28",
+        "monolog/monolog": "^1.22",
+        "doctrine/orm": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sprain\\Silex\\": "src/"
+        }
+    }
+}
