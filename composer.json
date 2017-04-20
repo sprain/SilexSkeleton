@@ -1,6 +1,4 @@
 {
-    "name": "ticketpark/gonzales",
-    "description": "A high-performance ticket booking application",
     "type": "project",
     "minimum-stability": "stable",
     "require": {
