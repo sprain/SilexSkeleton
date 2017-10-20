@@ -15,5 +15,9 @@ $app['cache'] = function($app) {
 // Doctrine
 $app['em'] = function($app) {
     $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(array(__DIR__ . '/../../src/Entity'), $app['config']['devMode'], null, $app['cache']);
+
+    $namingStrategy = new \Doctrine\ORM\Mapping\UnderscoreNamingStrategy();
+    $config->setNamingStrategy($namingStrategy);
+
     return \Doctrine\ORM\EntityManager::create($app['config']['db'], $config);
 };
