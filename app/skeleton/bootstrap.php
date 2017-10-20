@@ -5,9 +5,10 @@ $app = new Silex\Application();
 
 // Load configs and services
 require_once __DIR__.'/../config.php';
+$app['config'] = $config;
 
 // Set debug mode
-$app['debug'] = $app['devMode'];
+$app['debug'] = $app['config']['devMode'];
 
 // Load base services
 require_once __DIR__.'/services.php';

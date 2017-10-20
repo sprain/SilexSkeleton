@@ -1,15 +1,8 @@
 <?php
 
-// Dev mode
-$app['devMode'] = true;
+if (file_exists(__DIR__ . '/config_local.php')) {
+    require_once('config_local.php');
+}
 
-// Cache
-$app['cacheDir'] = __DIR__.'/cache/data';
-
-// Database
-$app['dbParams'] = array(
-    'driver'   => 'pdo_mysql',
-    'user'     => 'root',
-    'password' => 'password',
-    'dbname'   => 'foo',
-);
+$config['cacheDir'] =  __DIR__.'/cache/data/';
+$config['tempDir']  =  __DIR__.'/temp';
